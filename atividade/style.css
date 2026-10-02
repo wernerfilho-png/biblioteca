@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #f093fb, #f5576c);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container { width: 100%; padding: 20px; }
+
+.card {
+  background: white;
+  max-width: 400px;
+  margin: auto;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.5s ease;
+}
+
+h1 { text-align: center; color: #333; }
+
+.subtitle { text-align: center; margin-bottom: 20px; color: #777; }
+
+/* Abas */
+.tabs { display: flex; gap: 8px; margin-bottom: 20px; }
+
+.tab {
+  flex: 1;
+  padding: 10px;
+  background: #eee;
+  color: #555;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.3s;
+}
+.tab:hover { background: #ddd; }
+.tab.ativa { background: #f5576c; color: white; }
+
+.oculto { display: none; }
+
+/* Campos */
+.input-group { margin-bottom: 15px; }
+.input-group label { font-size: 14px; color: #555; }
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-top: 5px;
+  transition: 0.3s;
+}
+.input-group input:focus { border-color: #f5576c; outline: none; }
+
+input.erro { border: 2px solid red; }
+input.sucesso { border: 2px solid green; }
+
+.erro-texto { display: block; color: red; font-size: 12px; margin-top: 4px; min-height: 14px; }
+
+/* Botão */
+.btn {
+  width: 100%;
+  padding: 12px;
+  background: #f5576c;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn:hover { background: #d63a50; transform: scale(1.03); }
+
+/* Mensagens */
+.mensagem { text-align: center; margin-top: 15px; font-weight: bold; }
+.mensagem.erro-msg { color: red; }
+.mensagem.sucesso-msg { color: green; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+  .card { padding: 20px; }
+  h1 { font-size: 20px; }
+}

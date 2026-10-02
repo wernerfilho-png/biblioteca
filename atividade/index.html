@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clube do Livro - Cadastro e Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h1>📚 Clube do Livro</h1>
+      <p class="subtitle">Cadastro e Login de Leitores</p>
+
+      <div class="tabs">
+        <button type="button" class="tab ativa" id="tabCadastro">Cadastro</button>
+        <button type="button" class="tab" id="tabLogin">Login</button>
+      </div>
+
+      <!-- CADASTRO -->
+      <form id="formCadastro" novalidate>
+        <div class="input-group">
+          <label for="nome">Nome completo</label>
+          <input type="text" id="nome" placeholder="Ex: Maria Silva">
+          <small class="erro-texto" id="erroNome"></small>
+        </div>
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="exemplo@email.com">
+          <small class="erro-texto" id="erroEmail"></small>
+        </div>
+        <div class="input-group">
+          <label for="senha">Senha</label>
+          <input type="password" id="senha" placeholder="Mínimo 6 caracteres e 1 número">
+          <small class="erro-texto" id="erroSenha"></small>
+        </div>
+        <div class="input-group">
+          <label for="confirmar">Confirmar senha</label>
+          <input type="password" id="confirmar">
+          <small class="erro-texto" id="erroConfirmar"></small>
+        </div>
+        <button type="submit" class="btn">Cadastrar</button>
+        <p class="mensagem" id="mensagemCadastro"></p>
+      </form>
+
+      <!-- LOGIN -->
+      <form id="formLogin" class="oculto" novalidate>
+        <div class="input-group">
+          <label for="loginEmail">Email</label>
+          <input type="email" id="loginEmail">
+        </div>
+        <div class="input-group">
+          <label for="loginSenha">Senha</label>
+          <input type="password" id="loginSenha">
+        </div>
+        <button type="submit" class="btn">Entrar</button>
+        <p class="mensagem" id="mensagemLogin"></p>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="testes.js"></script>
+</body>
+</html>
